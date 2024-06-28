@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Your Business</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo">Prosperico</div>
+      <div
+        class="menu-toggle"
+        id="menu-toggle"
+        class="open-sidebar"
+        onclick="openSidebar()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="#000"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </div>
+      <div class="nav-list">
+        <div class="nav-links" id="nav-links">
+          <a class="navbar-link" href="#">Pricing</a>
+          <a class="navbar-link" href="#">Faq's</a>
+          <a class="navbar-link" href="#">Support</a>
+        </div>
+        <button class="navbar_button">Signup</button>
+      </div>
+    </nav>
+    <!-- sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="close-btn" onclick="closeSidebar()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="bi bi-x"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+          />
+        </svg>
+      </div>
+      <div class="side-list">
+        <div class="side-links" id="nav-links">
+          <a class="side-link" href="#">Pricing</a>
+          <a class="side-link" href="#">Faq's</a>
+          <a class="side-link" href="#">Support</a>
+        </div>
+        <button class="navbar_button">Signup</button>
+      </div>
+    </div>
+    <!-- hero-section -->
+    <div class="hero">
+      <div class="hero_sec">
+        <h2 class="hero_heading object-fit-contain">
+          7 Day Free Trial - No Credit card required
+        </h2>
+        <p class="hero_Unlock">
+          Unlock the <span style="color: #6dace7">Power</span> of
+          <span class="fit-content-span">
+            Data
+            <img
+              class="border_img"
+              src="./assets/svg/hero_border_img.svg"
+              alt="img"
+            />
+          </span>
+        </p>
+        <p class="hero_tuendata">
+          Turn Data into Actionable Insights with Our SaaS Dashboard
+        </p>
+        <button class="hero_getstarted">
+          Get Started
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="16"
+              viewBox="0 0 15 16"
+              fill="white"
+              class="hover_path"
+            >
+              <path
+                class="hover_path"
+                d="M8.293 3.24713C8.48053 3.05966 8.73484 2.95435 9 2.95435C9.26516 2.95435 9.51947 3.05966 9.707 3.24713L14.207 7.74713C14.3945 7.93466 14.4998 8.18897 14.4998 8.45413C14.4998 8.7193 14.3945 8.9736 14.207 9.16113L9.707 13.6611C9.5184 13.8433 9.2658 13.9441 9.0036 13.9418C8.7414 13.9395 8.49059 13.8344 8.30518 13.649C8.11977 13.4635 8.0146 13.2127 8.01233 12.9505C8.01005 12.6883 8.11084 12.4357 8.293 12.2471L11 9.45413H1.5C1.23478 9.45413 0.98043 9.34877 0.792893 9.16124C0.605357 8.9737 0.5 8.71935 0.5 8.45413C0.5 8.18892 0.605357 7.93456 0.792893 7.74703C0.98043 7.55949 1.23478 7.45413 1.5 7.45413H11L8.293 4.66113C8.10553 4.4736 8.00021 4.2193 8.00021 3.95413C8.00021 3.68897 8.10553 3.43466 8.293 3.24713Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <!-- charts-section -->
+    <div class="charts">
+      <div class="charts-main">
+        <div class="charts_left_section">
+          <div class="searchbar_section">
+            <div class="searchbar_section_heading">
+              <h2>Keep track of the health of your business</h2>
+              <p>Control and analyse your data in the most convenient way</p>
+            </div>
+            <div class="searchbar">
+              <div class="search_box">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.5624 14.8126L11.6029 11.8478L14.5624 14.8126ZM13.243 7.88547C13.243 9.37271 12.6522 10.799 11.6005 11.8507C10.5489 12.9023 9.12256 13.4931 7.63532 13.4931C6.14808 13.4931 4.72175 12.9023 3.67012 11.8507C2.61848 10.799 2.02768 9.37271 2.02768 7.88547C2.02768 6.39823 2.61848 4.97191 3.67012 3.92027C4.72175 2.86864 6.14808 2.27783 7.63532 2.27783C9.12256 2.27783 10.5489 2.86864 11.6005 3.92027C12.6522 4.97191 13.243 6.39823 13.243 7.88547V7.88547Z"
+                      stroke="#97959D"
+                      stroke-width="1.425"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <input
+                  type="search"
+                  name="search"
+                  id="searchbar"
+                  class="search_input"
+                  placeholder="Search"
+                />
+              </div>
+              <button type="submit" class="notification_btn">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                  >
+                    <rect
+                      x="0.541855"
+                      y="0.5"
+                      width="42.75"
+                      height="42.75"
+                      rx="7.91667"
+                      fill="#212227"
+                    />
+                    <path
+                      d="M21.9341 13.2988C18.778 13.2988 16.2222 15.8546 16.2222 19.0107V20.8117C16.2222 21.3949 15.9821 22.2697 15.6819 22.7672L14.5927 24.5854C13.9237 25.7089 14.3868 26.961 15.6218 27.3727C19.7214 28.7363 24.1554 28.7363 28.2549 27.3727C29.4127 26.9867 29.9101 25.6317 29.284 24.5854L28.1948 22.7672C27.8947 22.2697 27.6545 21.3864 27.6545 20.8117V19.0107C27.6459 15.8717 25.073 13.2988 21.9341 13.2988Z"
+                      stroke="white"
+                      strokeWidth="1.34583"
+                      strokeMiterlimit="10"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M24.7727 27.7241C24.7727 29.2936 23.4863 30.5801 21.9168 30.5801C21.1363 30.5801 20.4159 30.2542 19.9013 29.7396C19.3868 29.225 19.0609 28.5046 19.0609 27.7241"
+                      stroke="white"
+                      strokeWidth="1.34583"
+                      strokeMiterlimit="10"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="overview_navtabs d-flex justify-content-between align-items-center"
+          >
+            <p class="overview_heading">Overview</p>
+            <ul class="nav nav-pills2 ml-auto" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link2 active"
+                  id="pills-home1-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home1"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home1"
+                  aria-selected="true"
+                >
+                  Week
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link2"
+                  id="pills-profile1-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile1"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile1"
+                  aria-selected="false"
+                >
+                  Month
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link2"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  Year
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-home1"
+              role="tabpanel"
+              aria-labelledby="pills-home1-tab"
+              tabindex="0"
+            >
+              <div class="cards_1">
+                <div class="total_sales_card_1">
+                  <div class="total_sales_header">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.1"
+                          cx="16.1667"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#EA79BA"
+                        />
+                        <path
+                          d="M21.8985 11.5842H21.5818L18.906 8.90836C18.6922 8.69461 18.3439 8.69461 18.1222 8.90836C17.9085 9.12211 17.9085 9.47044 18.1222 9.69211L20.0143 11.5842H12.3193L14.2114 9.69211C14.4251 9.47836 14.4251 9.13003 14.2114 8.90836C13.9976 8.69461 13.6493 8.69461 13.4276 8.90836L10.7597 11.5842H10.443C9.73054 11.5842 8.25012 11.5842 8.25012 13.6109C8.25012 14.3788 8.40846 14.8854 8.74096 15.2179C8.93096 15.4159 9.16054 15.5188 9.40596 15.5742C9.63554 15.6296 9.88096 15.6375 10.1185 15.6375H22.2151C22.4605 15.6375 22.6901 15.6217 22.9118 15.5742C23.5768 15.4159 24.0835 14.9409 24.0835 13.6109C24.0835 11.5842 22.603 11.5842 21.8985 11.5842Z"
+                          fill="#EA79BA"
+                        />
+                        <path
+                          d="M21.7479 16.6665H10.5221C10.0312 16.6665 9.65915 17.1019 9.73831 17.5848L10.4033 21.654C10.625 23.0157 11.2187 24.5832 13.855 24.5832H18.2962C20.9641 24.5832 21.4391 23.2453 21.7241 21.749L22.5237 17.6086C22.6187 17.1178 22.2466 16.6665 21.7479 16.6665ZM15.0662 21.7728C15.0662 22.0815 14.8208 22.3269 14.52 22.3269C14.2112 22.3269 13.9658 22.0815 13.9658 21.7728V19.1603C13.9658 18.8594 14.2112 18.6061 14.52 18.6061C14.8208 18.6061 15.0662 18.8594 15.0662 19.1603V21.7728ZM18.4546 21.7728C18.4546 22.0815 18.2091 22.3269 17.9004 22.3269C17.5996 22.3269 17.3462 22.0815 17.3462 21.7728V19.1603C17.3462 18.8594 17.5996 18.6061 17.9004 18.6061C18.2091 18.6061 18.4546 18.8594 18.4546 19.1603V21.7728Z"
+                          fill="#EA79BA"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Total Sales</p>
+                  </div>
+                  <h2 class="card_center_heading">$513,068.98</h2>
+                  <p class="card_bottom_text">
+                    <span class="total_sales_bottom_text">+12%</span> on this
+                    week
+                  </p>
+                </div>
+                <div class="total_order_card_1">
+                  <div class="total_order_header">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="33"
+                        height="33"
+                        viewBox="0 0 33 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.15"
+                          cx="16.6251"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#6DACE7"
+                        />
+                        <path
+                          d="M19.7918 10.5312C19.7918 11.5129 18.9922 12.3125 18.0106 12.3125H15.2397C14.7489 12.3125 14.3056 12.1146 13.981 11.79C13.6564 11.4654 13.4585 11.0221 13.4585 10.5312C13.4585 9.54958 14.2581 8.75 15.2397 8.75H18.0106C18.5014 8.75 18.9447 8.94792 19.2693 9.2725C19.5939 9.59708 19.7918 10.0404 19.7918 10.5312Z"
+                          fill="#6DACE7"
+                        />
+                        <path
+                          d="M22.0321 11.1486C21.85 10.9982 21.6442 10.8795 21.4225 10.7924C21.1929 10.7053 20.9634 10.8874 20.9159 11.1249C20.6467 12.4786 19.4513 13.4999 18.0104 13.4999H15.2396C14.4479 13.4999 13.7038 13.1911 13.1417 12.6291C12.73 12.2174 12.445 11.6949 12.3342 11.1328C12.2867 10.8953 12.0492 10.7053 11.8196 10.8003C10.9013 11.1724 10.2917 12.0116 10.2917 13.6978V21.4166C10.2917 23.7916 11.7088 24.5832 13.4584 24.5832H19.7917C21.5413 24.5832 22.9584 23.7916 22.9584 21.4166V13.6978C22.9584 12.4074 22.6021 11.6157 22.0321 11.1486ZM13.4584 16.8645H16.625C16.9496 16.8645 17.2188 17.1336 17.2188 17.4582C17.2188 17.7828 16.9496 18.052 16.625 18.052H13.4584C13.1338 18.052 12.8646 17.7828 12.8646 17.4582C12.8646 17.1336 13.1338 16.8645 13.4584 16.8645ZM19.7917 21.2186H13.4584C13.1338 21.2186 12.8646 20.9495 12.8646 20.6249C12.8646 20.3003 13.1338 20.0311 13.4584 20.0311H19.7917C20.1163 20.0311 20.3854 20.3003 20.3854 20.6249C20.3854 20.9495 20.1163 21.2186 19.7917 21.2186Z"
+                          fill="#6DACE7"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Total Orders</p>
+                  </div>
+                  <h2 class="card_center_heading">569,230</h2>
+                  <p class="card_bottom_text">
+                    <span class="total_order_bottom_text">+18%</span> on this
+                    week
+                  </p>
+                </div>
+                <div class="visitors_card_1">
+                  <div class="visitors_header">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="33"
+                        height="33"
+                        viewBox="0 0 33 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.1"
+                          cx="16.2918"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#AA7AEB"
+                        />
+                        <path
+                          d="M16.2917 8.75C14.2175 8.75 12.5313 10.4363 12.5313 12.5104C12.5313 14.545 14.1225 16.1917 16.1967 16.2629C16.26 16.255 16.3233 16.255 16.3708 16.2629C16.3867 16.2629 16.3946 16.2629 16.4104 16.2629C16.4183 16.2629 16.4183 16.2629 16.4263 16.2629C18.4529 16.1917 20.0442 14.545 20.0521 12.5104C20.0521 10.4363 18.3658 8.75 16.2917 8.75Z"
+                          fill="#AA7AEB"
+                        />
+                        <path
+                          d="M20.3133 18.3688C18.1045 16.8963 14.5024 16.8963 12.2778 18.3688C11.2724 19.0417 10.7183 19.9521 10.7183 20.9259C10.7183 21.8996 11.2724 22.8021 12.2699 23.4671C13.3783 24.2113 14.8349 24.5834 16.2916 24.5834C17.7483 24.5834 19.2049 24.2113 20.3133 23.4671C21.3108 22.7942 21.8649 21.8917 21.8649 20.91C21.857 19.9363 21.3108 19.0338 20.3133 18.3688Z"
+                          fill="#AA7AEB"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Visitors</p>
+                  </div>
+                  <h2 class="card_center_heading">350,745</h2>
+                  <p class="card_bottom_text">
+                    <span class="visitors_bottom_text">-2%</span> on this week
+                  </p>
+                </div>
+              </div>
+              <div class="chart2_main">
+                <div class="reports_header">
+                  <p class="reports_heading">Reports</p>
+                  <div class="income_and_expenses">
+                    <div class="income">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.43896 0.645629L0.200857 5.20974C-0.034326 5.46301 0.145294 5.87492 0.490922 5.87492H8.96713C9.31275 5.87492 9.49237 5.46301 9.25719 5.20974L5.01909 0.645629C4.86248 0.476978 4.59556 0.476978 4.43896 0.645629Z"
+                            fill="#23C581"
+                          />
+                        </svg>
+                      </span>
+                      <p class="income_heading">Income</p>
+                    </div>
+                    <div class="expense">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                          fill="none"
+                        >
+                          <path
+                            d="M5.01925 5.56238L9.25735 0.998268C9.49253 0.744994 9.31291 0.333089 8.96728 0.333089L0.49108 0.333089C0.145452 0.333089 -0.0341668 0.744994 0.201016 0.998268L4.43912 5.56238C4.59572 5.73103 4.86264 5.73103 5.01925 5.56238Z"
+                            fill="#E74545"
+                          />
+                        </svg>
+                      </span>
+                      <p class="expense_heading">Expense</p>
+                    </div>
+                  </div>
+                </div>
+                <div id="chart2"></div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-profile1"
+              role="tabpanel"
+              aria-labelledby="pills-profile1-tab"
+              tabindex="0"
+            >
+              <div class="cards_1">
+                <div class="total_sales_card_1">
+                  <div class="total_sales_header">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.1"
+                          cx="16.1667"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#EA79BA"
+                        />
+                        <path
+                          d="M21.8985 11.5842H21.5818L18.906 8.90836C18.6922 8.69461 18.3439 8.69461 18.1222 8.90836C17.9085 9.12211 17.9085 9.47044 18.1222 9.69211L20.0143 11.5842H12.3193L14.2114 9.69211C14.4251 9.47836 14.4251 9.13003 14.2114 8.90836C13.9976 8.69461 13.6493 8.69461 13.4276 8.90836L10.7597 11.5842H10.443C9.73054 11.5842 8.25012 11.5842 8.25012 13.6109C8.25012 14.3788 8.40846 14.8854 8.74096 15.2179C8.93096 15.4159 9.16054 15.5188 9.40596 15.5742C9.63554 15.6296 9.88096 15.6375 10.1185 15.6375H22.2151C22.4605 15.6375 22.6901 15.6217 22.9118 15.5742C23.5768 15.4159 24.0835 14.9409 24.0835 13.6109C24.0835 11.5842 22.603 11.5842 21.8985 11.5842Z"
+                          fill="#EA79BA"
+                        />
+                        <path
+                          d="M21.7479 16.6665H10.5221C10.0312 16.6665 9.65915 17.1019 9.73831 17.5848L10.4033 21.654C10.625 23.0157 11.2187 24.5832 13.855 24.5832H18.2962C20.9641 24.5832 21.4391 23.2453 21.7241 21.749L22.5237 17.6086C22.6187 17.1178 22.2466 16.6665 21.7479 16.6665ZM15.0662 21.7728C15.0662 22.0815 14.8208 22.3269 14.52 22.3269C14.2112 22.3269 13.9658 22.0815 13.9658 21.7728V19.1603C13.9658 18.8594 14.2112 18.6061 14.52 18.6061C14.8208 18.6061 15.0662 18.8594 15.0662 19.1603V21.7728ZM18.4546 21.7728C18.4546 22.0815 18.2091 22.3269 17.9004 22.3269C17.5996 22.3269 17.3462 22.0815 17.3462 21.7728V19.1603C17.3462 18.8594 17.5996 18.6061 17.9004 18.6061C18.2091 18.6061 18.4546 18.8594 18.4546 19.1603V21.7728Z"
+                          fill="#EA79BA"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Total Sales</p>
+                  </div>
+                  <h2 class="card_center_heading">$513,068.98</h2>
+                  <p class="card_bottom_text">
+                    <span class="total_sales_bottom_text">+12%</span> on this
+                    week
+                  </p>
+                </div>
+                <div class="total_order_card_1">
+                  <div class="total_order_header">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="33"
+                        height="33"
+                        viewBox="0 0 33 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.15"
+                          cx="16.6251"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#6DACE7"
+                        />
+                        <path
+                          d="M19.7918 10.5312C19.7918 11.5129 18.9922 12.3125 18.0106 12.3125H15.2397C14.7489 12.3125 14.3056 12.1146 13.981 11.79C13.6564 11.4654 13.4585 11.0221 13.4585 10.5312C13.4585 9.54958 14.2581 8.75 15.2397 8.75H18.0106C18.5014 8.75 18.9447 8.94792 19.2693 9.2725C19.5939 9.59708 19.7918 10.0404 19.7918 10.5312Z"
+                          fill="#6DACE7"
+                        />
+                        <path
+                          d="M22.0321 11.1486C21.85 10.9982 21.6442 10.8795 21.4225 10.7924C21.1929 10.7053 20.9634 10.8874 20.9159 11.1249C20.6467 12.4786 19.4513 13.4999 18.0104 13.4999H15.2396C14.4479 13.4999 13.7038 13.1911 13.1417 12.6291C12.73 12.2174 12.445 11.6949 12.3342 11.1328C12.2867 10.8953 12.0492 10.7053 11.8196 10.8003C10.9013 11.1724 10.2917 12.0116 10.2917 13.6978V21.4166C10.2917 23.7916 11.7088 24.5832 13.4584 24.5832H19.7917C21.5413 24.5832 22.9584 23.7916 22.9584 21.4166V13.6978C22.9584 12.4074 22.6021 11.6157 22.0321 11.1486ZM13.4584 16.8645H16.625C16.9496 16.8645 17.2188 17.1336 17.2188 17.4582C17.2188 17.7828 16.9496 18.052 16.625 18.052H13.4584C13.1338 18.052 12.8646 17.7828 12.8646 17.4582C12.8646 17.1336 13.1338 16.8645 13.4584 16.8645ZM19.7917 21.2186H13.4584C13.1338 21.2186 12.8646 20.9495 12.8646 20.6249C12.8646 20.3003 13.1338 20.0311 13.4584 20.0311H19.7917C20.1163 20.0311 20.3854 20.3003 20.3854 20.6249C20.3854 20.9495 20.1163 21.2186 19.7917 21.2186Z"
+                          fill="#6DACE7"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Total Orders</p>
+                  </div>
+                  <h2 class="card_center_heading">569,230</h2>
+                  <p class="card_bottom_text">
+                    <span class="total_order_bottom_text">+18%</span> on this
+                    week
+                  </p>
+                </div>
+                <div class="visitors_card_1">
+                  <div class="visitors_header">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="33"
+                        height="33"
+                        viewBox="0 0 33 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.1"
+                          cx="16.2918"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#AA7AEB"
+                        />
+                        <path
+                          d="M16.2917 8.75C14.2175 8.75 12.5313 10.4363 12.5313 12.5104C12.5313 14.545 14.1225 16.1917 16.1967 16.2629C16.26 16.255 16.3233 16.255 16.3708 16.2629C16.3867 16.2629 16.3946 16.2629 16.4104 16.2629C16.4183 16.2629 16.4183 16.2629 16.4263 16.2629C18.4529 16.1917 20.0442 14.545 20.0521 12.5104C20.0521 10.4363 18.3658 8.75 16.2917 8.75Z"
+                          fill="#AA7AEB"
+                        />
+                        <path
+                          d="M20.3133 18.3688C18.1045 16.8963 14.5024 16.8963 12.2778 18.3688C11.2724 19.0417 10.7183 19.9521 10.7183 20.9259C10.7183 21.8996 11.2724 22.8021 12.2699 23.4671C13.3783 24.2113 14.8349 24.5834 16.2916 24.5834C17.7483 24.5834 19.2049 24.2113 20.3133 23.4671C21.3108 22.7942 21.8649 21.8917 21.8649 20.91C21.857 19.9363 21.3108 19.0338 20.3133 18.3688Z"
+                          fill="#AA7AEB"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Visitors</p>
+                  </div>
+                  <h2 class="card_center_heading">350,745</h2>
+                  <p class="card_bottom_text">
+                    <span class="visitors_bottom_text">-2%</span> on this week
+                  </p>
+                </div>
+              </div>
+              <div class="chart2_main">
+                <div class="reports_header">
+                  <p class="reports_heading">Reports</p>
+                  <div class="income_and_expenses">
+                    <div class="income">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.43896 0.645629L0.200857 5.20974C-0.034326 5.46301 0.145294 5.87492 0.490922 5.87492H8.96713C9.31275 5.87492 9.49237 5.46301 9.25719 5.20974L5.01909 0.645629C4.86248 0.476978 4.59556 0.476978 4.43896 0.645629Z"
+                            fill="#23C581"
+                          />
+                        </svg>
+                      </span>
+                      <p class="income_heading">Income</p>
+                    </div>
+                    <div class="expense">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                          fill="none"
+                        >
+                          <path
+                            d="M5.01925 5.56238L9.25735 0.998268C9.49253 0.744994 9.31291 0.333089 8.96728 0.333089L0.49108 0.333089C0.145452 0.333089 -0.0341668 0.744994 0.201016 0.998268L4.43912 5.56238C4.59572 5.73103 4.86264 5.73103 5.01925 5.56238Z"
+                            fill="#E74545"
+                          />
+                        </svg>
+                      </span>
+                      <p class="expense_heading">Expense</p>
+                    </div>
+                  </div>
+                </div>
+                <div id="chart2"></div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-contact"
+              role="tabpanel"
+              aria-labelledby="pills-contact-tab"
+              tabindex="0"
+            >
+              <div class="cards_1">
+                <div class="total_sales_card_1">
+                  <div class="total_sales_header">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.1"
+                          cx="16.1667"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#EA79BA"
+                        />
+                        <path
+                          d="M21.8985 11.5842H21.5818L18.906 8.90836C18.6922 8.69461 18.3439 8.69461 18.1222 8.90836C17.9085 9.12211 17.9085 9.47044 18.1222 9.69211L20.0143 11.5842H12.3193L14.2114 9.69211C14.4251 9.47836 14.4251 9.13003 14.2114 8.90836C13.9976 8.69461 13.6493 8.69461 13.4276 8.90836L10.7597 11.5842H10.443C9.73054 11.5842 8.25012 11.5842 8.25012 13.6109C8.25012 14.3788 8.40846 14.8854 8.74096 15.2179C8.93096 15.4159 9.16054 15.5188 9.40596 15.5742C9.63554 15.6296 9.88096 15.6375 10.1185 15.6375H22.2151C22.4605 15.6375 22.6901 15.6217 22.9118 15.5742C23.5768 15.4159 24.0835 14.9409 24.0835 13.6109C24.0835 11.5842 22.603 11.5842 21.8985 11.5842Z"
+                          fill="#EA79BA"
+                        />
+                        <path
+                          d="M21.7479 16.6665H10.5221C10.0312 16.6665 9.65915 17.1019 9.73831 17.5848L10.4033 21.654C10.625 23.0157 11.2187 24.5832 13.855 24.5832H18.2962C20.9641 24.5832 21.4391 23.2453 21.7241 21.749L22.5237 17.6086C22.6187 17.1178 22.2466 16.6665 21.7479 16.6665ZM15.0662 21.7728C15.0662 22.0815 14.8208 22.3269 14.52 22.3269C14.2112 22.3269 13.9658 22.0815 13.9658 21.7728V19.1603C13.9658 18.8594 14.2112 18.6061 14.52 18.6061C14.8208 18.6061 15.0662 18.8594 15.0662 19.1603V21.7728ZM18.4546 21.7728C18.4546 22.0815 18.2091 22.3269 17.9004 22.3269C17.5996 22.3269 17.3462 22.0815 17.3462 21.7728V19.1603C17.3462 18.8594 17.5996 18.6061 17.9004 18.6061C18.2091 18.6061 18.4546 18.8594 18.4546 19.1603V21.7728Z"
+                          fill="#EA79BA"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Total Sales</p>
+                  </div>
+                  <h2 class="card_center_heading">$513,068.98</h2>
+                  <p class="card_bottom_text">
+                    <span class="total_sales_bottom_text">+12%</span> on this
+                    week
+                  </p>
+                </div>
+                <div class="total_order_card_1">
+                  <div class="total_order_header">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="33"
+                        height="33"
+                        viewBox="0 0 33 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.15"
+                          cx="16.6251"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#6DACE7"
+                        />
+                        <path
+                          d="M19.7918 10.5312C19.7918 11.5129 18.9922 12.3125 18.0106 12.3125H15.2397C14.7489 12.3125 14.3056 12.1146 13.981 11.79C13.6564 11.4654 13.4585 11.0221 13.4585 10.5312C13.4585 9.54958 14.2581 8.75 15.2397 8.75H18.0106C18.5014 8.75 18.9447 8.94792 19.2693 9.2725C19.5939 9.59708 19.7918 10.0404 19.7918 10.5312Z"
+                          fill="#6DACE7"
+                        />
+                        <path
+                          d="M22.0321 11.1486C21.85 10.9982 21.6442 10.8795 21.4225 10.7924C21.1929 10.7053 20.9634 10.8874 20.9159 11.1249C20.6467 12.4786 19.4513 13.4999 18.0104 13.4999H15.2396C14.4479 13.4999 13.7038 13.1911 13.1417 12.6291C12.73 12.2174 12.445 11.6949 12.3342 11.1328C12.2867 10.8953 12.0492 10.7053 11.8196 10.8003C10.9013 11.1724 10.2917 12.0116 10.2917 13.6978V21.4166C10.2917 23.7916 11.7088 24.5832 13.4584 24.5832H19.7917C21.5413 24.5832 22.9584 23.7916 22.9584 21.4166V13.6978C22.9584 12.4074 22.6021 11.6157 22.0321 11.1486ZM13.4584 16.8645H16.625C16.9496 16.8645 17.2188 17.1336 17.2188 17.4582C17.2188 17.7828 16.9496 18.052 16.625 18.052H13.4584C13.1338 18.052 12.8646 17.7828 12.8646 17.4582C12.8646 17.1336 13.1338 16.8645 13.4584 16.8645ZM19.7917 21.2186H13.4584C13.1338 21.2186 12.8646 20.9495 12.8646 20.6249C12.8646 20.3003 13.1338 20.0311 13.4584 20.0311H19.7917C20.1163 20.0311 20.3854 20.3003 20.3854 20.6249C20.3854 20.9495 20.1163 21.2186 19.7917 21.2186Z"
+                          fill="#6DACE7"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Total Orders</p>
+                  </div>
+                  <h2 class="card_center_heading">569,230</h2>
+                  <p class="card_bottom_text">
+                    <span class="total_order_bottom_text">+18%</span> on this
+                    week
+                  </p>
+                </div>
+                <div class="visitors_card_1">
+                  <div class="visitors_header">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="33"
+                        height="33"
+                        viewBox="0 0 33 33"
+                        fill="none"
+                      >
+                        <circle
+                          opacity="0.1"
+                          cx="16.2918"
+                          cy="16.6666"
+                          r="15.8333"
+                          fill="#AA7AEB"
+                        />
+                        <path
+                          d="M16.2917 8.75C14.2175 8.75 12.5313 10.4363 12.5313 12.5104C12.5313 14.545 14.1225 16.1917 16.1967 16.2629C16.26 16.255 16.3233 16.255 16.3708 16.2629C16.3867 16.2629 16.3946 16.2629 16.4104 16.2629C16.4183 16.2629 16.4183 16.2629 16.4263 16.2629C18.4529 16.1917 20.0442 14.545 20.0521 12.5104C20.0521 10.4363 18.3658 8.75 16.2917 8.75Z"
+                          fill="#AA7AEB"
+                        />
+                        <path
+                          d="M20.3133 18.3688C18.1045 16.8963 14.5024 16.8963 12.2778 18.3688C11.2724 19.0417 10.7183 19.9521 10.7183 20.9259C10.7183 21.8996 11.2724 22.8021 12.2699 23.4671C13.3783 24.2113 14.8349 24.5834 16.2916 24.5834C17.7483 24.5834 19.2049 24.2113 20.3133 23.4671C21.3108 22.7942 21.8649 21.8917 21.8649 20.91C21.857 19.9363 21.3108 19.0338 20.3133 18.3688Z"
+                          fill="#AA7AEB"
+                        />
+                      </svg>
+                    </span>
+                    <p class="card_header_heading">Visitors</p>
+                  </div>
+                  <h2 class="card_center_heading">350,745</h2>
+                  <p class="card_bottom_text">
+                    <span class="visitors_bottom_text">-2%</span> on this week
+                  </p>
+                </div>
+              </div>
+              <div class="chart2_main">
+                <div class="reports_header">
+                  <p class="reports_heading">Reports</p>
+                  <div class="income_and_expenses">
+                    <div class="income">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.43896 0.645629L0.200857 5.20974C-0.034326 5.46301 0.145294 5.87492 0.490922 5.87492H8.96713C9.31275 5.87492 9.49237 5.46301 9.25719 5.20974L5.01909 0.645629C4.86248 0.476978 4.59556 0.476978 4.43896 0.645629Z"
+                            fill="#23C581"
+                          />
+                        </svg>
+                      </span>
+                      <p class="income_heading">Income</p>
+                    </div>
+                    <div class="expense">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="6"
+                          viewBox="0 0 10 6"
+                          fill="none"
+                        >
+                          <path
+                            d="M5.01925 5.56238L9.25735 0.998268C9.49253 0.744994 9.31291 0.333089 8.96728 0.333089L0.49108 0.333089C0.145452 0.333089 -0.0341668 0.744994 0.201016 0.998268L4.43912 5.56238C4.59572 5.73103 4.86264 5.73103 5.01925 5.56238Z"
+                            fill="#E74545"
+                          />
+                        </svg>
+                      </span>
+                      <p class="expense_heading">Expense</p>
+                    </div>
+                  </div>
+                </div>
+                <div id="chart2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="charts_right_section">
+          <div class="card">
+            <div class="card_head">
+              <h3>Analytics</h3>
+              <button type="submit" class="dots_btn">
+                <img
+                  src="./assets/svg/menu.svg"
+                  alt="dots-icon"
+                  width="3px"
+                  height="14px"
+                />
+              </button>
+            </div>
+            <div class="chart-area">
+              <div id="chart"></div>
+              <div class="chart-text">
+                <p class="percentage manrope chart_centre_text">80%</p>
+                <p class="label manrope chart_centre_text_1">Transactions</p>
+              </div>
+            </div>
+            <div class="legend">
+              <div class="active"><span></span>Active</div>
+              <div class="completed"><span></span>Completed</div>
+            </div>
+          </div>
+          <div class="products_and_order">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <button
+                class="nav-item nav-link active"
+                role="presentation"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                Home
+              </button>
+              <button
+                class="nav-item nav-link"
+                role="presentation"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                Profile
+              </button>
+              <div class="dots_btn_main">
+                <button type="submit" class="dots_btn">
+                  <img
+                    src="./assets/svg/menu.svg"
+                    alt="dots-icon"
+                    width="3px"
+                    height="14px"
+                  />
+                </button>
+              </div>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+                tabindex="0"
+              >
+                <div class="products_card">
+                  <img
+                    src="./assets/img/macbook-image.png"
+                    alt="macbook-img"
+                    width="47px"
+                    height="47px"
+                  />
+                  <div>
+                    <p class="product_name">MacBook M2 Pro</p>
+                  </div>
+                  <div class="product_rate">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="7"
+                        viewBox="0 0 10 7"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.60549 0.853881L0.367391 5.41799C0.132208 5.67127 0.311828 6.08317 0.657456 6.08317H9.13366C9.47929 6.08317 9.65891 5.67126 9.42373 5.41799L5.18562 0.853881C5.02902 0.68523 4.7621 0.68523 4.60549 0.853881Z"
+                          fill="#23C581"
+                        />
+                      </svg>
+                    </span>
+                    <p class="products_rate_value">15%</p>
+                  </div>
+                </div>
+                <div class="products_card">
+                  <img
+                    src="./assets/img/iphone-img.png"
+                    alt="macbook-img"
+                    width="47px"
+                    height="47px"
+                  />
+                  <div>
+                    <p class="product_name">IPhone 14 Pro</p>
+                  </div>
+                  <div class="product_rate">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="7"
+                        viewBox="0 0 10 7"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.60549 0.853881L0.367391 5.41799C0.132208 5.67127 0.311828 6.08317 0.657456 6.08317H9.13366C9.47929 6.08317 9.65891 5.67126 9.42373 5.41799L5.18562 0.853881C5.02902 0.68523 4.7621 0.68523 4.60549 0.853881Z"
+                          fill="#23C581"
+                        />
+                      </svg>
+                    </span>
+                    <p class="products_rate_value">7%</p>
+                  </div>
+                </div>
+                <div class="products_card">
+                  <img
+                    src="./assets/img/camera-lens-img.png"
+                    alt="macbook-img"
+                    width="47px"
+                    height="47px"
+                  />
+                  <div>
+                    <p class="product_name">Camera Lens</p>
+                  </div>
+                  <div class="product_rate">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="7"
+                        viewBox="0 0 10 7"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.60549 0.853881L0.367391 5.41799C0.132208 5.67127 0.311828 6.08317 0.657456 6.08317H9.13366C9.47929 6.08317 9.65891 5.67126 9.42373 5.41799L5.18562 0.853881C5.02902 0.68523 4.7621 0.68523 4.60549 0.853881Z"
+                          fill="#23C581"
+                        />
+                      </svg>
+                    </span>
+                    <p class="products_rate_value">2%</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+                tabindex="0"
+              >
+                <div class="products_card">
+                  <img
+                    src="./assets/img/macbook-image.png"
+                    alt="macbook-img"
+                    width="47px"
+                    height="47px"
+                  />
+                  <div>
+                    <p class="product_name">MacBook M2 Pro</p>
+                  </div>
+                  <div class="product_rate">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="7"
+                        viewBox="0 0 10 7"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.60549 0.853881L0.367391 5.41799C0.132208 5.67127 0.311828 6.08317 0.657456 6.08317H9.13366C9.47929 6.08317 9.65891 5.67126 9.42373 5.41799L5.18562 0.853881C5.02902 0.68523 4.7621 0.68523 4.60549 0.853881Z"
+                          fill="#23C581"
+                        />
+                      </svg>
+                    </span>
+                    <p class="products_rate_value">15%</p>
+                  </div>
+                </div>
+                <div class="products_card">
+                  <img
+                    src="./assets/img/iphone-img.png"
+                    alt="macbook-img"
+                    width="47px"
+                    height="47px"
+                  />
+                  <div>
+                    <p class="product_name">IPhone 14 Pro</p>
+                  </div>
+                  <div class="product_rate">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="7"
+                        viewBox="0 0 10 7"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.60549 0.853881L0.367391 5.41799C0.132208 5.67127 0.311828 6.08317 0.657456 6.08317H9.13366C9.47929 6.08317 9.65891 5.67126 9.42373 5.41799L5.18562 0.853881C5.02902 0.68523 4.7621 0.68523 4.60549 0.853881Z"
+                          fill="#23C581"
+                        />
+                      </svg>
+                    </span>
+                    <p class="products_rate_value">7%</p>
+                  </div>
+                </div>
+                <div class="products_card">
+                  <img
+                    src="./assets/img/camera-lens-img.png"
+                    alt="macbook-img"
+                    width="47px"
+                    height="47px"
+                  />
+                  <div>
+                    <p class="product_name">Camera Lens</p>
+                  </div>
+                  <div class="product_rate">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        height="7"
+                        viewBox="0 0 10 7"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.60549 0.853881L0.367391 5.41799C0.132208 5.67127 0.311828 6.08317 0.657456 6.08317H9.13366C9.47929 6.08317 9.65891 5.67126 9.42373 5.41799L5.18562 0.853881C5.02902 0.68523 4.7621 0.68523 4.60549 0.853881Z"
+                          fill="#23C581"
+                        />
+                      </svg>
+                    </span>
+                    <p class="products_rate_value">2%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- your-business-section -->
+    <div class="your_business_main">
+      <div class="your_business">
+        <div class="your_business_heading">
+          <h2>Unlock Your Business Potential Today!</h2>
+        </div>
+        <div class="Your_business_bottom_section">
+          <div class="your_business_bottom_left_section">
+            <p class="your_business_bottom_text">
+              Small businesses and startups looking to gain data insights
+            </p>
+            <button class="getstarted_btn">
+              Get Started
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="16"
+                  viewBox="0 0 15 16"
+                  fill="white"
+                  class="hover_path"
+                >
+                  <path
+                    class="hover_path"
+                    d="M8.293 3.24713C8.48053 3.05966 8.73484 2.95435 9 2.95435C9.26516 2.95435 9.51947 3.05966 9.707 3.24713L14.207 7.74713C14.3945 7.93466 14.4998 8.18897 14.4998 8.45413C14.4998 8.7193 14.3945 8.9736 14.207 9.16113L9.707 13.6611C9.5184 13.8433 9.2658 13.9441 9.0036 13.9418C8.7414 13.9395 8.49059 13.8344 8.30518 13.649C8.11977 13.4635 8.0146 13.2127 8.01233 12.9505C8.01005 12.6883 8.11084 12.4357 8.293 12.2471L11 9.45413H1.5C1.23478 9.45413 0.98043 9.34877 0.792893 9.16124C0.605357 8.9737 0.5 8.71935 0.5 8.45413C0.5 8.18892 0.605357 7.93456 0.792893 7.74703C0.98043 7.55949 1.23478 7.45413 1.5 7.45413H11L8.293 4.66113C8.10553 4.4736 8.00021 4.2193 8.00021 3.95413C8.00021 3.68897 8.10553 3.43466 8.293 3.24713Z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="your_business_cards">
+            <div class="total_sales_card">
+              <div class="total_sales_header">
+                <div class="total_sales_circle"></div>
+                <p class="card_header_heading">Total Sales</p>
+              </div>
+              <h2 class="card_center_heading">$513,068.98</h2>
+              <p class="card_bottom_text">
+                <span class="total_sales_bottom_text">+12%</span> on this week
+              </p>
+            </div>
+            <div class="visitors_card">
+              <div class="visitors_header">
+                <div class="visitors_circle"></div>
+                <p class="card_header_heading">Visitors</p>
+              </div>
+              <h2 class="card_center_heading">350,745</h2>
+              <p class="card_bottom_text">
+                <span class="visitors_bottom_text">-2%</span> on this week
+              </p>
+            </div>
+            <div class="total_order_card">
+              <div class="total_order_header">
+                <div class="total_order_circle"></div>
+                <p class="card_header_heading">Total Orders</p>
+              </div>
+              <h2 class="card_center_heading">569,230</h2>
+              <p class="card_bottom_text">
+                <span class="total_order_bottom_text">+18%</span> on this week
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Features section -->
+    <div
+      class="feat_main d-flex flex-column align-items-center justify-content-center"
+    >
+      <!-- feature tag -->
+      <div class="feat_tag">Features</div>
+
+      <!-- features heading -->
+      <div class="feat_head d-flex flex-column text-center">
+        <h2>
+          <span>Real-Time Insights,</span>
+          <span>Real-Time Results</span>
+        </h2>
+        <p>
+          Saas dashboard that enable users to perform various tasks and
+          activities related to their business
+        </p>
+      </div>
+
+      <!-- features body -->
+      <div class="feat_body">
+        <!-- card 1 -->
+        <div
+          class="feat_body-card d-flex flex-column align-items-center justify-content-start text-center"
+        >
+          <img src="./assets/img/feat_card-database.png" alt="database" />
+          <h4 class="feat_body-card-h4">Data Visualization</h4>
+          <p class="feat_body-card-p">
+            The ability to present complex data in a visually understandable
+            way, such as through charts.
+          </p>
+        </div>
+        <!-- card 2 -->
+        <div
+          class="feat_body-card d-flex flex-column align-items-center justify-content-start text-center"
+        >
+          <img src="./assets/img/feat_card-chart.png" alt="database" />
+          <h4 class="feat_body-card-h4">Integration</h4>
+          <p class="feat_body-card-p">
+            Seamless integration with other software and tools that a business
+            uses, creating a unified system
+          </p>
+        </div>
+        <!-- card 3 -->
+        <div
+          class="feat_body-card d-flex flex-column align-items-center justify-content-start text-center"
+        >
+          <img src="./assets/img/feat_card-lens.png" alt="database" />
+          <h4 class="feat_body-card-h4">Customization</h4>
+          <p class="feat_body-card-p">
+            Allowing users to tailor the dashboard to their specific needs and
+            preferences.
+          </p>
+        </div>
+        <!-- card 4 -->
+        <div
+          class="feat_body-card d-flex flex-column align-items-center justify-content-start text-center"
+        >
+          <img src="./assets/img/feat_card-database.png" alt="database" />
+          <h4 class="feat_body-card-h4">Reporting</h4>
+          <p class="feat_body-card-p">
+            Generating detailed reports that provide insights into the
+            business's performance.
+          </p>
+        </div>
+        <!-- card 5 -->
+        <div
+          class="feat_body-card d-flex flex-column align-items-center justify-content-start text-center"
+        >
+          <img src="./assets/img/feat_card-chart.png" alt="database" />
+          <h4 class="feat_body-card-h4">User Access Control</h4>
+          <p class="feat_body-card-p">
+            Managing who can access and interact with the dashboard, ensuring
+            data security.
+          </p>
+        </div>
+        <!-- card 6 -->
+        <div
+          class="feat_body-card d-flex flex-column align-items-center justify-content-start text-center"
+        >
+          <img src="./assets/img/feat_card-lens.png" alt="database" />
+          <h4 class="feat_body-card-h4">Collaboration Tools</h4>
+          <p class="feat_body-card-p">
+            Features that facilitate teamwork and communication among team
+            members.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonials -->
+    <div class="test_main">
+      <div class="test_inner d-flex align-items-center justify-content-between">
+        <!-- testimonials left -->
+        <div class="test_left">
+          <div class="feat_tag">Testimonials</div>
+          <h2>What <span>customer</span> say about us</h2>
+          <p>
+            Saas dashboard that enable users to perform various tasks and
+            activities related to their business
+          </p>
+          <!-- swiper buttons -->
+          <div
+            class="test_left-btns d-flex align-items-center justify-content-start"
+          >
+            <button class="test_swiper-left test_swiper-nav-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="15"
+                viewBox="0 0 18 15"
+                fill="none"
+              >
+                <path
+                  class="swiper-btn-svg"
+                  d="M8.73153 14.2505C8.82784 14.1546 8.90426 14.0405 8.95641 13.9149C9.00855 13.7894 9.03539 13.6547 9.03539 13.5187C9.03539 13.3828 9.00855 13.2481 8.95641 13.1225C8.90426 12.997 8.82784 12.8829 8.73153 12.7869L4.29849 8.3539L16.9545 8.3539C17.2285 8.3539 17.4912 8.24505 17.685 8.0513C17.8788 7.85755 17.9876 7.59476 17.9876 7.32076C17.9876 7.04675 17.8788 6.78397 17.685 6.59022C17.4912 6.39647 17.2285 6.28762 16.9545 6.28762L4.29849 6.28762L8.73152 1.85286C8.92561 1.65878 9.03465 1.39554 9.03465 1.12106C9.03465 0.846575 8.92561 0.583336 8.73152 0.389249C8.53744 0.195161 8.2742 0.0861241 7.99972 0.0861241C7.72524 0.0861241 7.462 0.195161 7.26791 0.389249L1.06907 6.58809C0.972751 6.68407 0.896329 6.79812 0.844185 6.9237C0.79204 7.04928 0.765198 7.18392 0.765198 7.3199C0.765198 7.45587 0.79204 7.59051 0.844185 7.71609C0.89633 7.84167 0.972751 7.95572 1.06907 8.05171L7.26791 14.2505C7.36389 14.3469 7.47794 14.4233 7.60352 14.4754C7.7291 14.5276 7.86374 14.5544 7.99972 14.5544C8.13569 14.5544 8.27033 14.5276 8.39591 14.4754C8.52149 14.4233 8.63554 14.3469 8.73153 14.2505Z"
+                  fill="#FF5BEF"
+                />
+              </svg>
+            </button>
+            <button class="test_swiper-right test_swiper-nav-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="16"
+                viewBox="0 0 18 16"
+                fill="none"
+              >
+                <path
+                  class="swiper-btn-svg"
+                  d="M10.007 1.25922C9.91069 1.3552 9.83426 1.46925 9.78212 1.59483C9.72997 1.72041 9.70313 1.85505 9.70313 1.99102C9.70313 2.127 9.72997 2.26164 9.78212 2.38722C9.83426 2.5128 9.91069 2.62685 10.007 2.72283L14.44 7.15587L1.78407 7.15586C1.51006 7.15586 1.24728 7.26471 1.05353 7.45847C0.859774 7.65222 0.750925 7.915 0.750925 8.18901C0.750925 8.46301 0.859774 8.72579 1.05353 8.91955C1.24728 9.1133 1.51006 9.22215 1.78407 9.22215L14.44 9.22215L10.007 13.6569C9.81291 13.851 9.70388 14.1142 9.70388 14.3887C9.70388 14.6632 9.81291 14.9264 10.007 15.1205C10.2011 15.3146 10.4643 15.4236 10.7388 15.4236C11.0133 15.4236 11.2765 15.3146 11.4706 15.1205L17.6695 8.92167C17.7658 8.82569 17.8422 8.71164 17.8943 8.58606C17.9465 8.46048 17.9733 8.32584 17.9733 8.18987C17.9733 8.05389 17.9465 7.91925 17.8943 7.79367C17.8422 7.66809 17.7658 7.55404 17.6695 7.45806L11.4706 1.25922C11.3746 1.1629 11.2606 1.08648 11.135 1.03433C11.0094 0.98219 10.8748 0.955347 10.7388 0.955347C10.6028 0.955347 10.4682 0.98219 10.3426 1.03433C10.217 1.08648 10.103 1.1629 10.007 1.25922Z"
+                  fill="#FF5BEF"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- testimonials right swiper -->
+        <div class="swiper test_swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img
+                class="swiper-quote"
+                src="./assets/svg/swiper-quote.svg"
+                alt="quote"
+              />
+              <p class="test_swiper-say">
+                Our business was in chaos before we started using this Saas
+                dashboard. We were drowning in data and couldn't make sense of
+                it. Thanks to this amazing tool, we now have clarity, and our
+                decision-making has become precise and data-driven.
+              </p>
+              <div class="test_swipe-user-ctr">
+                <img
+                  src="./assets/img/test-user-avatar.png"
+                  alt="user-avatar"
+                />
+                <div class="test_swipe-user-data">
+                  <h4>Sarah Johnson</h4>
+                  <p>Marketing Manager</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <img
+                class="swiper-quote"
+                src="./assets/svg/swiper-quote.svg"
+                alt="quote"
+              />
+              <p class="test_swiper-say">
+                Our business was in chaos before we started using this Saas
+                dashboard. We were drowning in data and couldn't make sense of
+                it. Thanks to this amazing tool, we now have clarity, and our
+                decision-making has become precise and data-driven.
+              </p>
+              <div class="test_swipe-user-ctr">
+                <img
+                  src="./assets/img/test-user-avatar.png"
+                  alt="user-avatar"
+                />
+                <div class="test_swipe-user-data">
+                  <h4>Sarah Johnson</h4>
+                  <p>Team Lead</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pricing section -->
+    <div class="price_main">
+      <!-- header -->
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <div class="feat_tag">Plans & Features</div>
+        <h2 class="faq_header">Pricing</h2>
+      </div>
+      <!-- Price toggle -->
+      <div
+        class="price_toggle-ctr d-flex align-items-center justify-content-center"
+      >
+        <p>Monthly</p>
+        <div
+          id="toggle-ctr"
+          class="price_toggle-btn-outer d-flex align-items-center justify-content-end"
+        >
+          <div id="toggle-btn" class="price_toggle-btn"></div>
+        </div>
+        <p>Yearly</p>
+      </div>
+      <div class="cards">
+        <!-- card 1 -->
+        <div class="Starter_card">
+          <p class="Starter">Starter</p>
+          <p class="starter_29">
+            <span class="starter_dolar">$</span>
+            <span id="starter-price">29</span>
+          </p>
+          <div class="starter_data">
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">Data Visualization</p>
+            </div>
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">Real-Time Analytics</p>
+            </div>
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">Customization</p>
+            </div>
+          </div>
+          <div class="starter_information">
+            <img
+              class="i_img"
+              src="/assets/svg/carbon_information.svg"
+              alt="img"
+            />
+            <p class="starter_small">
+              Small businesses and startups looking to gain data insights
+            </p>
+          </div>
+          <button class="starter_LearnMore">
+            Learn More
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                class="hover_path"
+              >
+                <path
+                  class="hover_path"
+                  d="M8.793 2.94147C8.98053 2.754 9.23484 2.64868 9.5 2.64868C9.76516 2.64868 10.0195 2.754 10.207 2.94147L14.707 7.44147C14.8945 7.629 14.9998 7.8833 14.9998 8.14847C14.9998 8.41363 14.8945 8.66794 14.707 8.85547L10.207 13.3555C10.0184 13.5376 9.7658 13.6384 9.5036 13.6361C9.2414 13.6339 8.99059 13.5287 8.80518 13.3433C8.61977 13.1579 8.5146 12.9071 8.51233 12.6449C8.51005 12.3827 8.61084 12.1301 8.793 11.9415L11.5 9.14847H2C1.73478 9.14847 1.48043 9.04311 1.29289 8.85557C1.10536 8.66804 1 8.41368 1 8.14847C1 7.88325 1.10536 7.6289 1.29289 7.44136C1.48043 7.25383 1.73478 7.14847 2 7.14847H11.5L8.793 4.35547C8.60553 4.16794 8.50021 3.91363 8.50021 3.64847C8.50021 3.3833 8.60553 3.129 8.793 2.94147Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <!-- card 2 -->
+        <div class="Starter_card">
+          <p class="Starter">Business</p>
+          <p class="starter_29">
+            <span class="starter_dolar">$</span>
+            <span id="business-price">79</span>
+          </p>
+          <div class="starter_data">
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">All Basic Plan Features</p>
+            </div>
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">Integrations</p>
+            </div>
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">Advanced Reporting</p>
+            </div>
+          </div>
+          <div class="starter_information">
+            <img
+              class="i_img"
+              src="/assets/svg/carbon_information.svg"
+              alt="img"
+            />
+            <p class="starter_small">
+              Growing businesses that need comprehensive data management and
+              teamwork features
+            </p>
+          </div>
+          <button class="Business_LearnMore">
+            Learn More
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                class="hover_path"
+              >
+                <path
+                  class="hover_path"
+                  d="M8.793 2.94147C8.98053 2.754 9.23484 2.64868 9.5 2.64868C9.76516 2.64868 10.0195 2.754 10.207 2.94147L14.707 7.44147C14.8945 7.629 14.9998 7.8833 14.9998 8.14847C14.9998 8.41363 14.8945 8.66794 14.707 8.85547L10.207 13.3555C10.0184 13.5376 9.7658 13.6384 9.5036 13.6361C9.2414 13.6339 8.99059 13.5287 8.80518 13.3433C8.61977 13.1579 8.5146 12.9071 8.51233 12.6449C8.51005 12.3827 8.61084 12.1301 8.793 11.9415L11.5 9.14847H2C1.73478 9.14847 1.48043 9.04311 1.29289 8.85557C1.10536 8.66804 1 8.41368 1 8.14847C1 7.88325 1.10536 7.6289 1.29289 7.44136C1.48043 7.25383 1.73478 7.14847 2 7.14847H11.5L8.793 4.35547C8.60553 4.16794 8.50021 3.91363 8.50021 3.64847C8.50021 3.3833 8.60553 3.129 8.793 2.94147Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <!-- card 3 -->
+        <div class="Starter_card">
+          <p class="Starter">Enterprise</p>
+          <p class="starter_29">
+            <span class="starter_dolar">$</span>
+            <span id="enterprise-price">149</span>
+          </p>
+          <div class="starter_data">
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">All Pro Plan Features</p>
+            </div>
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">Full Access to API</p>
+            </div>
+            <div class="Starter_data_Visualization">
+              <img
+                src="/assets/svg/teenyicons_tick-outline.svg"
+                class="tick_img"
+                alt="img"
+              />
+              <p class="starter_Visualization">Dedicated Support</p>
+            </div>
+          </div>
+          <div class="starter_information">
+            <img
+              class="i_img"
+              src="/assets/svg/carbon_information.svg"
+              alt="img"
+            />
+            <p class="starter_small">
+              Larger enterprises requiring advanced data solutions and
+              personalized support.
+            </p>
+          </div>
+          <button class="Enterprise_LearnMore">
+            Learn More
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                class="hover_path"
+              >
+                <path
+                  class="hover_path"
+                  d="M8.793 2.94147C8.98053 2.754 9.23484 2.64868 9.5 2.64868C9.76516 2.64868 10.0195 2.754 10.207 2.94147L14.707 7.44147C14.8945 7.629 14.9998 7.8833 14.9998 8.14847C14.9998 8.41363 14.8945 8.66794 14.707 8.85547L10.207 13.3555C10.0184 13.5376 9.7658 13.6384 9.5036 13.6361C9.2414 13.6339 8.99059 13.5287 8.80518 13.3433C8.61977 13.1579 8.5146 12.9071 8.51233 12.6449C8.51005 12.3827 8.61084 12.1301 8.793 11.9415L11.5 9.14847H2C1.73478 9.14847 1.48043 9.04311 1.29289 8.85557C1.10536 8.66804 1 8.41368 1 8.14847C1 7.88325 1.10536 7.6289 1.29289 7.44136C1.48043 7.25383 1.73478 7.14847 2 7.14847H11.5L8.793 4.35547C8.60553 4.16794 8.50021 3.91363 8.50021 3.64847C8.50021 3.3833 8.60553 3.129 8.793 2.94147Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ section -->
+    <div class="faq_main">
+      <div
+        class="faq_inner d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="feat_tag">Frequently asked questions</div>
+        <h2 class="faq_header">FAQs</h2>
+        <div class="faq_body">
+          <div class="accordion" id="accordionExample">
+            <!-- faq 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  What is a Saas dashboard, and how can it benefit my business?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Molestias reiciendis dolore cum harum amet dignissimos, optio
+                  distinctio nobis aliquid, similique sint aut praesentium
+                  aperiam quae temporibus iusto fugiat vitae hic?
+                </div>
+              </div>
+            </div>
+            <!-- faq 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Is the Saas dashboard compatible with other software and tools
+                  we use in our business?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Molestias reiciendis dolore cum harum amet dignissimos, optio
+                  distinctio nobis aliquid, similique sint aut praesentium
+                  aperiam quae temporibus iusto fugiat vitae hic?
+                </div>
+              </div>
+            </div>
+            <!-- faq 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  How do I get started with the Saas dashboard, and is there a
+                  learning curve?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Molestias reiciendis dolore cum harum amet dignissimos, optio
+                  distinctio nobis aliquid, similique sint aut praesentium
+                  aperiam quae temporibus iusto fugiat vitae hic?
+                </div>
+              </div>
+            </div>
+            <!-- faq 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  What kind of customer support do you offer?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Molestias reiciendis dolore cum harum amet dignissimos, optio
+                  distinctio nobis aliquid, similique sint aut praesentium
+                  aperiam quae temporibus iusto fugiat vitae hic?
+                </div>
+              </div>
+            </div>
+            <!-- faq 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  Can I customize the Saas dashboard to match our business's
+                  unique requirements?
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Molestias reiciendis dolore cum harum amet dignissimos, optio
+                  distinctio nobis aliquid, similique sint aut praesentium
+                  aperiam quae temporibus iusto fugiat vitae hic?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-footer">
+        <div class="footer-about">
+          <h2 class="footer-logo">Prosperico</h2>
+          <p class="footer-description">
+            SaaS dashboard that enable users to perform various tasks and
+            activities related to their business.
+          </p>
+          <div class="footer-social">
+            <a href="#"
+              ><img src="./assets/svg/linkedin-icon.svg" alt="LinkedIn"
+            /></a>
+            <a href="#"
+              ><img src="./assets/svg/facebook-icon.svg" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="./assets/svg/instagram-icon.svg" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Mission</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3 class="footer-heading">Newsletter</h3>
+          <p class="footer-newsletter-description">
+            Enter your email to get discounts and offers.
+          </p>
+          <form class="footer-form">
+            <input type="email" placeholder="Email" required />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- js file link -->
+    <script src="./js/script.js"></script>
+    <!-- Swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- bootstrp js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JS -->
+    <script>
+      // Testimonial Swiper
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".test_swiper-right",
+          prevEl: ".test_swiper-left",
+        },
+      });
+
+      // Pricing toggle
+      const toggleCtr = document.getElementById("toggle-ctr");
+      const starterPrice = document.getElementById("starter-price");
+      const businessPrice = document.getElementById("business-price");
+      const enterprisePrice = document.getElementById("enterprise-price");
+
+      const handleBtnToggle = () => {
+        const currentStyle = window.getComputedStyle(toggleCtr).justifyContent;
+        if (currentStyle === "flex-end") {
+          toggleCtr.style.setProperty(
+            "justify-content",
+            "flex-start",
+            "important"
+          );
+
+          starterPrice.innerText = "30";
+          businessPrice.innerText = "80";
+          enterprisePrice.innerText = "150";
+        } else {
+          toggleCtr.style.setProperty(
+            "justify-content",
+            "flex-end",
+            "important"
+          );
+
+          starterPrice.innerText = "29";
+          businessPrice.innerText = "79";
+          enterprisePrice.innerText = "149";
+        }
+      };
+
+      toggleCtr.addEventListener("click", handleBtnToggle);
+    </script>
+  </body>
+</html>
